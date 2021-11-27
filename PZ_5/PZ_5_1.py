@@ -1,12 +1,15 @@
-def Ramka(slovo):
-    dlina = len(slovo)
+# С помощью функций получить вертикальную и горизонтальную линии. Линия проводится
+# многократной печатью символа. Заключить слово в рамку из полученных линий.
+
+def Ramka(slovo):          # Вводим функцию
+    dlina = len(slovo)     # Находим длину слова
     Ramka = ''
-    for i in range(3):
+    for i in range(3):     # Цикл и проверка строк
         if i != 1:
             Ramka += '*' * (dlina + 2) + '\n'
         else:
             Ramka += "*" + slovo + "*" + '\n'
     return Ramka
 
-res = Ramka(input("Введите слово: "))
+res = Ramka(input("Введите слово: ")) # Вводим слово и получаем результат
 print(res)
