@@ -1,9 +1,9 @@
-#Дано трехзначное число. Проверить истинность высказывания: «Цифры данного числа
-#образуют возрастающую или убывающую последовательность».
+# Дано трехзначное число. Проверить истинность высказывания: «Цифры данного числа
+# образуют возрастающую или убывающую последовательность».
 
 import sys
 
-ches1 = input("Введите первую цифру: ") # Вводим цифры
+ches1 = input("Введите первую цифру: ")  # Вводим цифры
 ches2 = input("Введите вторую цифру: ")
 ches3 = input("Введите третью цифру: ")
 
@@ -33,9 +33,11 @@ while True:
         sys.exit()
     break
 
-if ches1 > ches2 > ches3:
-    print(True)
-elif ches1 < ches2 < ches3:
-    print(True)
-else:
-    print(False)
+print((ches1 > ches2 > ches3) or (ches1 < ches2 < ches3))
+
+# if ches1 > ches2 > ches3:
+#     print(True)
+# elif ches1 < ches2 < ches3:
+#     print(True)
+# else:
+#     print(False)
