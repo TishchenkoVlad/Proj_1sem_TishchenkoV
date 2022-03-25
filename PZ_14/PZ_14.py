@@ -29,8 +29,6 @@ for str in open('ip_address.txt', encoding='UTF-8'): # Пробегаемся п
 
 
 
-
-
 f.close()
 res1.close()
 res2.close()
