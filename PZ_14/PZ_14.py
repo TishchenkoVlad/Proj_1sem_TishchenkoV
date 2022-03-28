@@ -3,6 +3,10 @@
 # а во второй – все остальные. Посчитать количество полученных строк в каждом
 # файле
 
+import re
+
+chet1 = 0
+chet2 = 0
 
 check = False # Задаём флаг
 
@@ -20,10 +24,17 @@ for str in open('ip_address.txt', encoding='UTF-8'): # Пробегаемся п
         if point < 4 and point > 0:  # Находим позицию точки
             #print(str)
             #print(str[:point])
-            if str[:point] != "0" and str[point + 1:point + 2] != "0": # Проверка октетов
-                res2.write(str)
-            else:
+            match = re.match(r'[0][.][0][.]', str) # Проверка октетов
+            if match:
+                chet1 += 1
                 res1.write(str)
+            else:
+                chet2 += 1
+                res2.write(str)
+
+print("В первом файле:", chet1, "строка")
+print("Во втором файле:", chet2, "строк")
+
 
 
 
